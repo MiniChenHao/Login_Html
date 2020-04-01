@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+    <link href="CSS/LoginStyle.css" rel="stylesheet">
+    <script src="JS/jquery-1.10.2.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".div-Input input").on("focus", function () {
+                $(this).addClass("focus")
+            })
+            $(".div-Input input").on("blur", function () {
+                if ($(this).val() == "") {
+                    $(this).removeClass("focus");
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <form action="index.html" class="form-Login">
+        <h1>Login</h1>
+        <div class="div-Input">
+            <input type="text">
+            <span data-placeholder="Username"></span>
+        </div>
+        <div class="div-Input">
+            <input type="password">
+            <span data-placeholder="Password"></span>
+        </div>
+        <input type="submit" class="botton-Login" value="Login">
+        <div class="div-SignUp">
+            Don't have account?<a href="#">Sign up</a>
+        </div>
+    </form>
+</body>
+
+</html>
